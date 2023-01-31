@@ -1,0 +1,50 @@
+Comandos de github
+
+Ingresar a perfil de github para poder subir cambios
+	
+
+Descargar e insertar cambios
+
+	git fetch && git pull
+
+Subir cambios 
+
+	git add . //Añade todo, pero si queremos añadir un archivo en especifico
+				Se suplanta el punto por el nombre exacto del archivo
+	git commit -m "Un comentario"
+	git push //Mete los cambios al archivo
+	
+Conflictos de archivo
+
+	En caso de que el archivo tenga conflictos para subir cambios
+	o integrar cambios en algún archivo
+	
+	Checamos el estado de git
+		git status
+	
+	Creamos una rama nueva
+		git checkout -b nombreDeLaRama
+		
+	Confirmamos en que rama estamos
+		git branch
+		
+	Subimos cambios con add y commit
+	
+	Hasta este punto no se han subido los cambios pero
+	podemos traerlos a la rama principal
+	
+	Si hacemos este comando "cat nombreDelArchivo", se podrá
+	observar las lineas que hay en el archivo, pero no los cambios
+	
+	Regresamos a la rama principal
+	
+		git checkout main
+		
+	Traemos cambios
+	
+		git merge nombreDeLaRama
+		
+	Y de nuevo vemos los cambios en la consola pero ya ingresados
+	
+	
+		cat nombreDelArchivo
