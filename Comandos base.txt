@@ -1,7 +1,9 @@
 Comandos de github
 
 Ingresar a perfil de github para poder subir cambios
-	
+	git config --global user.email "ajas@xd.com"
+	git config --global user.name "Your Name"
+
 
 Descargar e insertar cambios
 
