@@ -42,6 +42,9 @@ Conflictos de archivo
 	
 		git checkout main
 		
+	También se usa "git switch main" pero este solo cambia de ramas, no agrega cambios
+	como lo hacemos con "git checkout main"
+
 	Traemos cambios
 	
 		git merge nombreDeLaRama
@@ -50,3 +53,26 @@ Conflictos de archivo
 	
 	
 		cat nombreDelArchivo
+
+Regresar a una versión anterior del repositorio
+
+Si se desea regresar a una versión anterior del repositorio se tienen que ejecutar los siguientes comandos:
+
+	Primero se tiene que revisar la versión a la que se quiere regresar por medio del ID
+	el cual se ve con el siguiente comando:
+
+		git log --oneline
+
+	Una vez identificado, se tiene que copiar el ID y junto con el siguiente comando se efectuara la reversión
+
+		git revert 96b15dc .
+
+	Esto (hará que cambie de "rama") se puede hacer tanto en el último commit como en el primero hecho
+	en el repositorio, pero en el repositorio de GitHub no se van a ver revertidos los cambios, así que,
+	se tiene que copiar la carpeta completa, poner la copia en agún otro sitio de la computadora y borrar el 
+	contenido de la carpeta original, despues se ingresan los comandos con los que se suben cambios, 
+	ejecutar el comando con el que se regresa a la rama principal y las carpetas como los archivos que están 
+	en GitHub. se eliminarán, aquí no termina la cosa.
+
+	Una vez hecho eso, se copia el contenido de la carpeta a la que se le hizo copia y se vuelve a copiar
+	a la carpeta original, ya hecho eso, solo queda volver a subir cambios.
